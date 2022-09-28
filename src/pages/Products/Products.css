@@ -1,0 +1,7 @@
+.display-foods {
+    margin-top: 70px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}

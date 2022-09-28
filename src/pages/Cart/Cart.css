@@ -1,0 +1,76 @@
+.display-cart {
+    margin: 80px 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.display-cart2 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.link {
+    margin-bottom: 10px;
+    color: red;
+    text-align: left;
+    display: flex;
+}
+
+.link:hover {
+    color: blueviolet;
+}
+
+.each-item {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.each-item img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity p {
+    margin: auto 0px;
+    padding: 0px 5px;
+}
+
+.quantity button {
+    background-color: gray;
+    border: none;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cart-btn button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: orange;
+}
+
+.cart-btn button:hover {
+    color: white;
+    cursor: pointer;
+}

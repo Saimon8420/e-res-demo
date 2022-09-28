@@ -1,0 +1,46 @@
+.display-header {
+    background-color: rgb(88, 192, 157);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.display-header h4 {
+    padding-left: 25px;
+}
+
+.header-part2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart span {
+    position: absolute;
+    top: -14px;
+    left: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.cart button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: orange;
+    margin-right: 25px;
+}
+
+.cart button:hover {
+    color: white;
+    cursor: pointer;
+}
