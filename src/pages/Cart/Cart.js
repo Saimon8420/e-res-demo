@@ -48,12 +48,12 @@ const Cart = () => {
                 {
                     foods.map(food => <div className='each-item'>
                         <img src={food.img} alt="" />
-                        <h4>Name:{food.name}</h4>
+                        <h6>Name:{food.name}</h6>
                         <p>Price: ${food.price}</p>
                         <div className='quantity'>
-                            <button onClick={() => handleIncrease(food, '+')}>+</button>
+                            <p><button onClick={() => handleIncrease(food, '+')}>+</button></p>
                             <p>{food.quantity}</p>
-                            <button onClick={() => handleIncrease(food, '-')}>-</button>
+                            <p><button onClick={() => handleIncrease(food, '-')}>-</button></p>
                         </div>
                         <p>Total: ${food.quantity * food.price}</p>
                     </div>)

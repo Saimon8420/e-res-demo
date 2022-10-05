@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import { FoodContext } from '../../App';
 import Product from './Product/Product';
 import './Products.css';
@@ -9,6 +10,9 @@ import fishRice from '../../imgaes/fish-rice1.jpg';
 import fishRice2 from '../../imgaes/fish-rice2.jpg';
 import fishRice3 from '../../imgaes/fish-rice3.jpg';
 import vegetableRice from '../../imgaes/vegetable-rice.jpg';
+import BG1 from '../../imgaes/background1.jpg';
+import BG2 from '../../imgaes/background2.jpg';
+
 const Products = () => {
     const { value } = useContext(FoodContext);
     const [foods, setFoods] = value;
@@ -34,15 +38,61 @@ const Products = () => {
         }
     }
     return (
-        <div className='display-foods'>
-            {
-                allFoods.map(food => <Product
-                    key={food.id}
-                    food={food}
-                    handleAddToCart={handleAddToCart}
-                >
-                </Product>)
-            }
+        <div className='Product-container'>
+
+            {/* <div className='carousel'>
+                <Carousel fade>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={BG1}
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={BG2}
+                            alt="Second slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div> */}
+
+            <div>
+                <Carousel fade className='carousel-2'>
+                    {
+                        allFoods.map(food =>
+                            <Carousel.Item>
+                                <div className='carousel-food'>
+                                    <img src={food.img} alt="" />
+                                    <h4>Name: {food.name}</h4>
+                                    <p>Price: {food.price}</p>
+                                    <button onClick={() => handleAddToCart(food)}>Add To Cart</button>
+                                </div>
+                            </Carousel.Item>)
+                    }
+                </Carousel>
+            </div>
+            <div className='display-foods'>
+                {
+                    allFoods.map(food => <Product
+                        key={food.id}
+                        food={food}
+                        handleAddToCart={handleAddToCart}
+                    >
+                    </Product>)
+                }
+            </div>
         </div>
     );
 };

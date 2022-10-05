@@ -1,5 +1,56 @@
+.Product-container {
+    margin-top: 80px;
+}
+
+.carousel {
+    /* position: absolute; */
+    height: 300px;
+    width: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: 0 20px;
+    border-radius: 10px 0px 10px 0px;
+}
+
+.carousel img {
+    height: 300px;
+    width: auto;
+}
+
+.carousel-2 {
+    background-color: burlywood;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.carousel-food {
+    margin: 20px;
+    border-radius: 10px;
+    height: 400px;
+    width: 50%;
+    margin: 30px auto;
+    background-color: bisque;
+}
+
+.carousel-food img {
+    height: 250px;
+    width: 100%;
+    padding: 10px;
+}
+
+.carousel-food button {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: orange;
+}
+
+.carousel-food button:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .display-foods {
-    margin-top: 70px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
