@@ -29,9 +29,16 @@ const CheckOut = () => {
                     <Link className='link' to='/home/cart'>Go Back to Cart</Link>
                     <h3 style={{ 'color': 'green', 'borderBottom': '1px solid black' }}>Order Summary:</h3>
                     {
-                        foods.map(food => <div className='list-container' key={food.id}><p>{++count}. <span>{food.quantity} X {food.name} = ${food.quantity * food.price}</span></p></div>)
+                        foods.map(food => <div className='list-container' key={food.id}><p>{++count}) <span>{food.quantity} X {food.name} = ${food.quantity * food.price}</span></p></div>)
                     }
                     <h4 style={{ 'color': 'green', 'borderTop': '1px solid black' }}>Grand Total: ${totalPrice}</h4>
+                    {/* {
+                        foods.map(eachFood => <table>
+                            <tr>Item
+                                <tbody>{eachFood.name}</tbody>
+                            </tr>
+                        </table>)
+                    } */}
                 </div>
                 <div className='shipping-info'>
                     <h4 style={{ 'color': 'green', 'borderBottom': '1px solid black' }}>Shipping Information</h4>

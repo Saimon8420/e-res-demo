@@ -12,6 +12,7 @@ import fishRice3 from '../../imgaes/fish-rice3.jpg';
 import vegetableRice from '../../imgaes/vegetable-rice.jpg';
 import BG1 from '../../imgaes/background1.jpg';
 import BG2 from '../../imgaes/background2.jpg';
+import { Tooltip } from 'react-bootstrap';
 
 const Products = () => {
     const { value } = useContext(FoodContext);
@@ -77,7 +78,8 @@ const Products = () => {
                                     <img src={food.img} alt="" />
                                     <h4>Name: {food.name}</h4>
                                     <p>Price: {food.price}</p>
-                                    <button onClick={() => handleAddToCart(food)}>Add To Cart</button>
+                                    <button className="button-30" onClick={() => handleAddToCart(food)}>Add To Cart
+                                    </button>
                                 </div>
                             </Carousel.Item>)
                     }

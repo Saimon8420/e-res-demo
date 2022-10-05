@@ -16,9 +16,10 @@
 }
 
 .list-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
-    justify-content: space-evenly;
+    justify-items: stretch;
     gap: 10px;
 }
 
@@ -38,6 +39,10 @@
     align-items: center;
     width: 50%;
     margin: 0 auto;
+}
+
+.shipping-info input:focus {
+    outline-color: orangered;
 }
 
 .shipping-input {
